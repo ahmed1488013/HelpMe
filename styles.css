@@ -1,0 +1,105 @@
+/* Basic styling for the FAQ section */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .faq-container {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333333;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .faq-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .question {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333333;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    padding: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .answer {
+    display: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555555;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-left: 4px solid #2980B9;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Active question style */
+  .question.active {
+    background-color: #2980B9;
+    color: white;
+  }
+  
+  .answer.active {
+    display: block;
+    transform: scaleY(1);
+    transition: transform 0.3s ease;
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    0% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .faq-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    .question {
+      font-size: 18px;
+    }
+  
+    .answer {
+      font-size: 14px;
+    }
+  }
+  

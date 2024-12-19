@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - HelpMe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Arial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <div class="question">What is HelpMe?</div>
+        <div class="answer">HelpMe is a virtual support site designed to assist users in solving their issues.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">How can I contact customer support?</div>
+        <div class="answer">You can contact customer support via email at support@helpme.com.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">Is HelpMe free to use?</div>
+        <div class="answer">Yes, HelpMe is free to use for all users.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">How do I create an account?</div>
+        <div class="answer">You can create an account by visiting the signup page and filling out the required information.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">Can I reset my password?</div>
+        <div class="answer">Yes, you can reset your password by clicking on the "Forgot Password" link on the login page.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">What should I do if I encounter a technical issue?</div>
+        <div class="answer">If you encounter a technical issue, you can report it through the support page, and our team will assist you.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">Is there a mobile app for HelpMe?</div>
+        <div class="answer">Currently, there is no mobile app available for HelpMe, but the site is fully responsive on mobile devices.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">How can I upgrade my account?</div>
+        <div class="answer">To upgrade your account, visit the subscription page and choose the plan that best suits your needs.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">What is your refund policy?</div>
+        <div class="answer">We offer a 30-day refund policy for any purchases made through our site.</div>
+      </li>
+      <li class="faq-item">
+        <div class="question">How do I delete my account?</div>
+        <div class="answer">If you wish to delete your account, please contact support@helpme.com, and our team will process your request.</div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.question');
+    
+    questions.forEach(question => {
+      question.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
